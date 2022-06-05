@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+    label{
+        @apply pb-1 block font-medium text-xs
+    }
+  input {
+    @apply bg-transparent focus:border-[#1e272e] outline-none w-full border py-[.40rem] rounded-md text-[#1e272e] font-medium px-2;
+  }
+}
+
+.form {
+    border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 35px 35px 70px #d9d9d9,
+    -35px -35px 70px #ffffff;
+}
+
+.cardproduct:hover {
+  box-shadow: 1px 1px 14px 12px rgba(0, 0, 0, 0.066);
+}
+.container_card_cart {
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+}
+.container_card_cart::-webkit-scrollbar {
+  width: 3px;
+}
+.container_card_cart::-webkit-scrollbar-thumb {
+  background-color: rgb(203, 201, 201);
+}
+.container_card_cart::-webkit-scrollbar-track {
+  background-color: #f2f2f2;
+}
