@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const base_url = `${process.env.BASE_Url}/api/`
+const base_url = `https://shop-next-shariflo.vercel.app/api/`
 
 
 // get all products
