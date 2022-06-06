@@ -5,6 +5,13 @@ import {
 import connectDb from "../../utils/connectDB";
 import User from "../../model/user";
 import bcrypt from "bcrypt";
+import cors from "cors";
+
+const corsOptions ={
+    origin:'http://localhost:3000', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
+}
 
 connectDb();
 export default async (req: any, res: any) => {
@@ -17,6 +24,7 @@ export default async (req: any, res: any) => {
 
 const Login = async (req: any, res: any) => {
   try {
+    await cors(corsOptions)
     const { email, password } = req.body;
     const user = await User.findOne({ email });
     if (!user)

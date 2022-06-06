@@ -1,14 +1,16 @@
 import axios from "axios";
-
-const base_url = `http://shop-next-shariflo.vercel.app/api/`
-
+import app from "./Axios";
 
 // get all products
-export const getAllProducts = ()=> axios.get(`${base_url}/products`)
+export const getAllProducts = () => app.get(`/products`);
 // get product by id
-export const getProductById = ({id}:{id:string})=> axios.get(`${base_url}/products/${id}`)
+export const getProductById = ({ id }: { id: string }) =>
+  app.get(`/products/${id}`);
 
 // signup
-export const signUpApi = (data:{})=> axios.post(`${base_url}/signup`,data)
-export const loginApi = (data:{})=> axios.post(`${base_url}/login`,data)
-export const generateTokenApi = ()=> axios.get(`${base_url}/accessToken`)
+export const signUpApi = (data: {}) =>
+  app.post(`/signup`, data);
+export const loginApi = (data: {}) =>
+  app.post(`/login`, data);
+export const generateTokenApi = () =>
+  app.get(`/accessToken`);
