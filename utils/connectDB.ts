@@ -5,9 +5,7 @@ const connectDb = async () => {
   }
   mongoose
     // @ts-ignore
-    .connect(
-      " mongodb+srv://admin:m1a2h3d4i5@cluster0.gy9ht.mongodb.net/shops?retryWrites=true&w=majority"
-    )
+    .connect("mongodb+srv://admin:m1a2h3d4i5@cluster0.gy9ht.mongodb.net/shops?retryWrites=true&w=majority")
     .then(() => {
       console.log("connected DB");
     })
