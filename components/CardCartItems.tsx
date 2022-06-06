@@ -51,7 +51,7 @@ const CardCartItems = ({ item }: { item: any }) => {
     return dispatch({ type: "ADD_CART", payload: newData });
   };
   return (
-    <div className=" border flex flex-col md:h-96 lg:h-80 lg:flex-row items-start gap-10 p-10 cursor-pointer">
+    <div className=" border flex flex-col md:h-96 lg:h-80 lg:flex-row items-start gap-10 p-10 ">
       {/* right show info cart */}
       <div className="flex flex-col h-full justify-around ">
         <div className="relative w-14 h-14">
@@ -61,20 +61,20 @@ const CardCartItems = ({ item }: { item: any }) => {
             layout="fill"
           />
         </div>
-        <div className="flex items-center gap-2 text-[#1e272e]">
-          <button onClick={() => increase()}>
-            <GoPlusSmall size={20} />
+        <div className="flex items-center gap-2 text-[#1e272e] mt-5 md:mt-2">
+          <button className="text-2xl" onClick={() => increase()}>
+            <GoPlusSmall  />
           </button>
           <p className="text-xs">{item.count}</p>
           {item.count === 1 ? (
             <button
               onClick={() => deleteById()}
-              className="text-red-600"
+              className="text-red-600 text-xl"
             >
-              <MdDelete size={18} />
+              <MdDelete  />
             </button>
           ) : (
-            <button onClick={() => decrease()}>
+            <button className="text-2xl" onClick={() => decrease()}>
               {" "}
               <FiMinus />
             </button>
